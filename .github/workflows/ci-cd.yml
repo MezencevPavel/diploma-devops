@@ -1,0 +1,56 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest  # Используем Windows для совместимости
+
+    steps:
+      # Checkout кода
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Установка зависимостей (пример для Python)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      # Запуск тестов
+      - name: Run tests
+        run: |
+          pytest tests/  # Укажи путь к тестам
+
+      # Сборка (если нужно)
+      - name: Build
+        run: |
+          echo "Building project..."  # Замени на свою команду (например, pyinstaller для Python)
+
+      # Деплой (пример на локальный сервер)
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Deploying to local server..."
+          # Пример: копирование через PowerShell (замени путь и сервер)
+          # Copy-Item -Path . -Destination \\local-server\path -Recurse -Force
+          # Или для GitHub Pages:
+          # git config --global user.name "Your Name"
+          # git config --global user.email "your.email@example.com"
+          # git checkout --orphan gh-pages
+          # git add .
+          # git commit -m "Deploy to GitHub Pages"
+          # git push origin gh-pages --force
+
