@@ -28,13 +28,13 @@
    ```bash
    terraform init
    ```
-    ![Terraform init](screenshots/example.png)
+    ![Terraform init](https://github.com/MezencevPavel/diploma-devops/blob/main/img/1.2%20terraform_init.png)
 
 2. Применение конфигурации:
    ```bash
    terraform apply -auto-approve
    ```
-    ![Terraform apply](screenshots/example.png)
+    ![Terraform apply](https://github.com/MezencevPavel/diploma-devops/blob/main/img/1.1%20terraform%20apply.png)
 
 ### Пример кода Terraform
 
@@ -190,15 +190,15 @@ Kubernetes устанавливается на мастер- и воркер-н�
      sudo kubeadm join <master_ip>:6443 --token <token> --discovery-token-ca-cert-hash sha256:<hash>
      ```
 
-    ![install worker and master](screenshots/example.png) 
+    ![install worker and master](https://github.com/MezencevPavel/diploma-devops/blob/main/img/1.8%20install%20worker%20and%20master.png) 
 
-    ![install kuber ](screenshots/example.png) 
+    ![install kuber ](https://github.com/MezencevPavel/diploma-devops/blob/main/img/1.9%20install%20kuber%20.png) 
 
-    ![install kuber2](screenshots/example.png)
+    ![install kuber2](https://github.com/MezencevPavel/diploma-devops/blob/main/img/2.0%20install%20kuber2.png)
 
-    ![install kub](screenshots/example.png)
+    ![install kub](https://github.com/MezencevPavel/diploma-devops/blob/main/img/2.1%20install%20kub.png)
 
-    ![Kub Klasater](screenshots/example.png)
+    ![Kub Klasater](https://github.com/MezencevPavel/diploma-devops/blob/main/img/2.2%20Kub%20Klasater.png)
 
 ---
 
@@ -235,11 +235,11 @@ Kubernetes устанавливается на мастер- и воркер-н�
    - Откройте `http://localhost:3000`, логин: `admin`, пароль из команды выше.
    - Добавьте Prometheus как источник данных: `http://prometheus-server.monitoring.svc.cluster.local`.
 
-![Grafana](screenshots/example.png)
+![Grafana](https://github.com/MezencevPavel/diploma-devops/blob/main/img/4.1%20Grafana.png)
 
-![Grafana-Dashboard](screenshots/example.png)
+![Grafana-Dashboard](https://github.com/MezencevPavel/diploma-devops/blob/main/img/4.2%20Grafana-Dashboard.png)
 
-![Grafana-Dashboard2](screenshots/example.png)
+![Grafana-Dashboard2](https://github.com/MezencevPavel/diploma-devops/blob/main/img/4.3%20Grafana-Dashboard2.png)
 
 
 ---
